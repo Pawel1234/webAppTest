@@ -103,7 +103,7 @@
 						<goals>deploy tomcat7:deploy</goals>
 				    </configuration>
 				</plugin>
-				
+			<!--	
 				<plugin>
            <groupId>com.google.code.maven-replacer-plugin</groupId>
            <artifactId>replacer</artifactId>
@@ -126,8 +126,20 @@
                    </replacement>         
                </replacements>
            </configuration>
-       </plugin>
+       </plugin>-->
 
+	   <plugin>
+    <artifactId>maven-war-plugin</artifactId> <!-- or maven-jar-plugin -->
+    <version>2.2</version>
+    <configuration>
+        <archive>
+            <manifestEntries>
+                <Build-Time>${maven.build.timestamp}-${project.version}</Build-Time>
+            </manifestEntries>
+        </archive>
+    </configuration>
+</plugin>
+	   
 		</plugins>
       <resources>
         <resource>
