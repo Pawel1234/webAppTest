@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+.prompts {
+	color: red;
+}
+
+.indexPageTitle {
+	font-style: italic;
+	font-size: 1.5em;
+}
+
+.italicClass {
+	font-style: italic;
+}
+
+.errors {
+	color: red;
+	font-style: italic;
+}
+
+.oddRows{
+background: MediumTurquoise;
+}
+.evenRows{
+background: PowderBlue;
+}
+
+.panelBackground{
+background: #eee;
+}
