@@ -100,7 +100,7 @@
 					<configuration>
 						<tagNameFormat>v@{project.version}</tagNameFormat>
 						<pushChanges>false</pushChanges>
-						<goals>deploy tomcat7:deploy</goals>
+						<goals>deploy tomcat7:deploy-only</goals>
 				    </configuration>
 				</plugin>
 			<!--	
