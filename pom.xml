@@ -3,7 +3,7 @@
   <groupId>pl.test</groupId>
   <artifactId>test</artifactId>
   <packaging>war</packaging>
-  <version>123.5-SNAPSHOT</version>
+  <version>123.4-SNAPSHOT</version>
   <name>test Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -100,8 +100,34 @@
 					<configuration>
 						<tagNameFormat>v@{project.version}</tagNameFormat>
 						<pushChanges>false</pushChanges>
+						<goals>deploy tomcat7:deploy</goals>
 				    </configuration>
 				</plugin>
+				
+				<plugin>
+           <groupId>com.google.code.maven-replacer-plugin</groupId>
+           <artifactId>replacer</artifactId>
+           <version>1.5.2</version>
+           <executions>
+               <execution>
+                   <phase>package</phase>
+                   <goals>
+                       <goal>replace</goal>
+                   </goals>                   
+               </execution>
+           </executions>
+           <configuration>
+				<basedir>C:\Documents and Settings\Pawel\Desktop\mavenGitStart\webAppTest\target\testSelect</basedir>
+               <file>index.html</file>
+               <replacements>
+                   <replacement>
+                       <token>@version@</token>
+                       <value>${project.version}-${maven.build.timestamp}</value>
+                   </replacement>         
+               </replacements>
+           </configuration>
+       </plugin>
+
 		</plugins>
       <resources>
         <resource>
