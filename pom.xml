@@ -15,6 +15,13 @@
 		<tomcat.url.port>8080</tomcat.url.port>
 		
 	</properties>
+	
+	
+	<scm>
+    <connection>scm:git:https://github.com/Pawel1234/webAppTest.git</connection>
+    <developerConnection>scm:git:https://github.com/Pawel1234/webAppTest.git</developerConnection>
+    </scm>
+  
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
