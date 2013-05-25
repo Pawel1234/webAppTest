@@ -3,7 +3,7 @@
   <groupId>pl.test</groupId>
   <artifactId>test</artifactId>
   <packaging>war</packaging>
-  <version>126.6</version>
+  <version>126.7-SNAPSHOT</version>
   <name>test Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -19,7 +19,7 @@
 	<scm>
     <connection>scm:git:https://github.com/Pawel1234/webAppTest.git</connection>
     <developerConnection>scm:git:https://github.com/Pawel1234/webAppTest.git</developerConnection>
-      <tag>rel-126.6</tag>
+      <tag>HEAD</tag>
   </scm>
   
 	<dependencies>
